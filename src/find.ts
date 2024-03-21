@@ -16,7 +16,11 @@ const main = async () => {
     where: {
       id: 4,
     },
+    select: {
+      title: true,
+    },
   });
+
   console.log(findUnique);
 };
 
