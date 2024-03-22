@@ -34,20 +34,45 @@ const main = async () => {
   // console.log(createPost);
 
   //-----------------------------------
+  // const createPost = await prisma.post.create({
+  //   data: {
+  //     title: "this is title 5",
+  //     content: "this is content of the post. 5",
+  //     authorId: 1,
+  //     postCategory: {
+  //       create: {
+  //         categoryId: 2,
+  //         // category: {
+  //         //   connect: {
+  //         //     id: 1,
+  //         //   },
+  //         // },
+  //       },
+  //     },
+  //   },
+  //   include: {
+  //     postCategory: true,
+  //   },
+  // });
+
+  //-----------------------------------
   const createPost = await prisma.post.create({
     data: {
       title: "this is title 5",
       content: "this is content of the post. 5",
       authorId: 1,
       postCategory: {
-        create: {
-          categoryId: 2,
-          // category: {
-          //   connect: {
-          //     id: 1,
-          //   },
-          // },
-        },
+        create: [
+          {
+            categoryId: 1,
+          },
+          {
+            categoryId: 2,
+          },
+          {
+            categoryId: 3,
+          },
+        ],
       },
     },
     include: {
