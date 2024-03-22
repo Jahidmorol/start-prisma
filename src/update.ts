@@ -24,20 +24,20 @@ const updates = async () => {
     },
   });
 
-  const upsertData = await prisma.post.upsert({
-    where: {
-      id: 9,
-    },
-    update: {
-      authorName: "Jahid",
-    },
-    create: {
-      title: "this is new title",
-      content: "this is new content",
-    },
-  });
+  //   const upsertData = await prisma.post.upsert({
+  //     where: {
+  //       id: 9,
+  //     },
+  //     update: {
+  //       authorName: "Jahid",
+  //     },
+  //     create: {
+  //       title: "this is new title",
+  //       content: "this is new content",
+  //     },
+  //   });
 
-  console.log(upsertData);
+  //   console.log(upsertData);
 };
 
 updates();

@@ -1,419 +1,60 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, UserRole } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
 const main = async () => {
-  const result = await prisma.post.createMany({
-    data: [
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 5",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 6",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-      {
-        title: "this is a title 7",
-        content: "this is a content",
-        authorName: "author is Jahid",
-      },
-    ],
-  });
+  // const createUser = await prisma.user.create({
+  //   data: {
+  //     username: "user2",
+  //     email: "user2@ph.com",
+  //     role: UserRole.user,
+  //   },
+  // });
+  // const createProfile = await prisma.profile.create({
+  //   data: {
+  //     bio: "this is bio...",
+  //     userId: 1,
+  //   },
+  // });
+  // const createCategory = await prisma.category.create({
+  //   data: {
+  //     name: "Python engineering",
+  //   },
+  // });
+  // console.log(createCategory);
 
-  console.log(result);
+  //-----------------------------------
+  // const createPost = await prisma.post.create({
+  //   data: {
+  //     title: "this is title 5",
+  //     content: "this is content of the post. 5",
+  //     authorId: 1,
+  //   },
+  // });
+  // console.log(createPost);
+
+  //-----------------------------------
+  const createPost = await prisma.post.create({
+    data: {
+      title: "this is title 5",
+      content: "this is content of the post. 5",
+      authorId: 1,
+      postCategory: {
+        create: {
+          categoryId: 2,
+          // category: {
+          //   connect: {
+          //     id: 1,
+          //   },
+          // },
+        },
+      },
+    },
+    include: {
+      postCategory: true,
+    },
+  });
+  console.log(createPost);
 };
 
 main();
