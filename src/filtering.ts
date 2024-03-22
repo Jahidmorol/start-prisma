@@ -3,22 +3,22 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 const filtering = async () => {
-  //   const and_filtering = await prisma.post.findMany({
-  //     where: {
-  //       AND: [
-  //         {
-  //           title: {
-  //             contains: "title",
-  //           },
-  //         },
-  //         {
-  //           published: true,
-  //         },
-  //       ],
-  //     },
-  //   });
+  const andFiltering = await prisma.post.findMany({
+    where: {
+      AND: [
+        {
+          title: {
+            contains: "title",
+          },
+        },
+        {
+          published: true,
+        },
+      ],
+    },
+  });
 
-  const or_filtering = await prisma.post.findMany({
+  const orFiltering = await prisma.post.findMany({
     where: {
       OR: [
         {
@@ -33,7 +33,54 @@ const filtering = async () => {
     },
   });
 
-  console.log("and_filtering", or_filtering);
+  const notFiltering = await prisma.post.findMany({
+    where: {
+      NOT: [
+        {
+          title: {
+            contains: "this",
+          },
+        },
+      ],
+    },
+  });
+
+  const startsWith = await prisma.user.findMany({
+    where: {
+      email: {
+        startsWith: "user1@ph.com", // endsWith, contains, equals
+      },
+    },
+  });
+
+  const userNameArray = ["user1", "user2", "user5"];
+
+  const userNamesByArray = await prisma.user.findMany({
+    where: {
+      username: {
+        in: userNameArray,
+      },
+    },
+  });
+
+  const inDepthData = await prisma.user.findUnique({
+    where: {
+      id: 1,
+    },
+    include: {
+      post: {
+        include: {
+          postCategory: {
+            include: {
+              category: true,
+            },
+          },
+        },
+      },
+    },
+  });
+
+  console.dir(inDepthData, { depth: Infinity });
 };
 
 filtering();
